@@ -4,10 +4,9 @@ package project.ensa.Creators;
 import project.ensa.Entity.Factory;
 import project.ensa.Entity.Warehouse;
 
-public   class FactoryCreator {
+public  class FactoryCreator {
 
     private static FactoryCreator instance ;
-    private String country ;
 
     public static synchronized FactoryCreator getInstance() {
         if (instance == null)

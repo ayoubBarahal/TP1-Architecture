@@ -21,7 +21,7 @@ public class CompanyBuilder {
     }
 
     public CompanyBuilder addFactory(String country, String... warehouseData) {
-        Factory factory = factoryCreator.createFactory(country, warehouseData);
+        Factory factory = factoryCreator.getInstance().createFactory(country, warehouseData);
         this.factories.add(factory);
         company.addFactory(factory);
         return this;

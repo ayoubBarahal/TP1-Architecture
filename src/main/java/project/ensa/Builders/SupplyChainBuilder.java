@@ -38,17 +38,13 @@ public class SupplyChainBuilder {
     }
 
     private String convertCountryNameToCode(String name) {
-        switch (name.toLowerCase()) {
-            case "maroc": return "M";
-            case "senegal": return "S";
-            case "france": return "F";
-            default: return name.substring(0, 1).toUpperCase();
-        }
+        return name.substring(0, 1).toUpperCase();
+
     }
 
     public SupplyChain build() {
-        supplyChain.companies = this.companies; // mettre à jour les sociétés
-        supplyChain.distances = this.distances; // mettre à jour les distances
+        supplyChain.companies = this.companies;
+        supplyChain.distances = this.distances;
         return supplyChain;
     }
 
